@@ -1,5 +1,5 @@
 # name of the library
-LIBNAME = PFCalEEVisuserlib
+LIBNAME = PFCALEEVisuserlib
 
 #Necessary to use shell built-in commands
 SHELL=bash
