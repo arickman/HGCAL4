@@ -3,7 +3,7 @@
 # GNUmakefile for examples module.  Gabriele Cosmo, 06/04/98.
 # --------------------------------------------------------------
 
-name := PFCalEEVis
+name := PFCALEEVis
 G4TARGET := $(name)
 G4EXLIB := true
 
@@ -12,7 +12,7 @@ ifndef G4INSTALL
 endif
 
 CPPFLAGS += -std=c++0x -Iuserlib/include/ $(shell $(ROOTSYS)/bin/root-config --cflags)
-EXTRALIBS += $(shell $(ROOTSYS)/bin/root-config --glibs) -Luserlib/lib -lPFCalEEVisuserlib
+EXTRALIBS += $(shell $(ROOTSYS)/bin/root-config --glibs) -Luserlib/lib -lPFCALEEVisuserlib
 
 .PHONY: $(SUBDIRS) all
 all: $(SUBDIRS) lib bin
