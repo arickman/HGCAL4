@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 	G4RunManager * runManager = new G4RunManager;
 
 	// Set mandatory initialization classes
-	int version = DetectorConstruction::v_HGCAL_E26_TH;
+	int version = DetectorConstruction::HGCAL_E26_TH;
 
 	int model = DetectorConstruction::m_FULLSECTION;
 
