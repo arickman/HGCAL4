@@ -109,7 +109,7 @@ inline void SeededGeneratorAction::SetGenerator(G4VPrimaryGenerator* gen) {
 			<< line3 << "\n" << line4;
 }*/
 inline void SeededGeneratorAction::PipeData(){
-	ofstream outputFile("temp.rndm2");
+	ofstream outputFile("temp2.rndm");
 	int seed1;
 	  cout << "Please enter a 5 digit integer seed value: ";
 	  cin >> seed1;
