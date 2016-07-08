@@ -38,6 +38,7 @@
 #include "globals.hh"
 #include <map>
 #include "EventAction.hh"
+using namespace std;
 
 class G4Event;
 class DetectorConstruction;
