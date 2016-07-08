@@ -100,16 +100,31 @@ inline void SeededGeneratorAction::SetGenerator(G4VPrimaryGenerator* gen) {
 	currentGenerator = gen;
 }
 
-inline void SeededGeneratorAction::PipeData(){
+/*inline void SeededGeneratorAction::PipeData(){
 	ofstream outputFile("temp.rndm");
 	Int_t line1 = evt_-> status().x(), line2 = evt_-> status().y(),
 			line3 = evt_-> seeds().x(), line4 = evt_-> seeds().y();
 	outputFile << "Uvec\n" <<  line1 << "\n" << line2 << "\n"
 			<< line3 << "\n" << line4;
+}*/
+inline void SeededGeneratorAction::PipeData(){
+	ofstream outputFile("temp.rndm2");
+	int seed1;
+	  cout << "Please enter a 5 digit integer seed value: ";
+	  cin >> seed1;
+	int seed2;
+	  cout << "Please enter a 5 digit integer seed value: ";
+	  cin >> seed2;
+	int seed3;
+	  cout << "Please enter a 5 digit integer seed value: ";
+	  cin >> seed3;
+	//Int_t line1 = evt_-> status().x(), line2 = evt_-> status().y(),
+			//line3 = evt_-> seeds().x(), line4 = evt_-> seeds().y();
+	outputFile << "Uvec\n" <<  seed1 << "\n" << 0 << "\n"
+			<< seed2 << "\n" << seed3;
 }
 inline void SeededGeneratorAction::SetGenerator(G4String genname) {
-	std::map<G4String, G4VPrimaryGenerator*>::iterator pos = gentypeMap.find(
-			genname);
+	std::map<G4String, G4VPrimaryGenerator*>::iterator pos = gentypeMap.find(genname);
 	if (pos != gentypeMap.end()) {
 		currentGenerator = pos->second;
 		currentGeneratorName = genname;

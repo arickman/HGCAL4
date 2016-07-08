@@ -134,7 +134,7 @@ void SeededGeneratorAction::GeneratePrimaries(G4Event* anEvent) {
 	int currentEvt = anEvent->GetEventID();
 	tree_->GetEntry(currentEvt);
 	G4double et = 0.0;
-	CLHEP::HepRandom::restoreEngineStatus ("temp.rndm");
+	CLHEP::HepRandom::restoreEngineStatus ("temp.rndm2");
 	if (hadrons_->size() != 0){
 		eventAction_->SetWait(true);
 		et = 4.0;
