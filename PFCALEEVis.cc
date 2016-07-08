@@ -22,7 +22,7 @@
 #include "G4UIExecutive.hh"
 #endif
 
-int main(int argc, char** argv, int seed1, int seed2, int seed3) {
+int main(int argc, char** argv) {
 #ifdef G4VIS_USE
 	std::cout << " -- G4VIS_USE is set " << std::endl;
 #else
@@ -44,18 +44,22 @@ int main(int argc, char** argv, int seed1, int seed2, int seed3) {
 	int model = DetectorConstruction::m_FULLSECTION;
 
         bool signal = true;
-	std::string data = "";
+	//std::string data = "";
+     int seed1;
+     int seed2;
+     int seed3;
 	if (argc > 2)
 		version = atoi(argv[2]);
 	if (argc > 3)
-		//model = atoi(argv[3]);
-		model = seed1;
+		model = atoi(argv[3]);
 	if (argc > 4)
-		//signal = atoi(argv[4]);
-		signal = seed2;
+		signal = atoi(argv[4]);
 	if (argc > 5)
-		//data = argv[5];
-		data = seed3;
+		seed1 = atoi(argv[5]);
+	if (argc > 6)
+		seed2 = atoi(argv[6]);
+	if (argc > 7)
+		seed3 = atoi(argv[7]);
 	std::cout << "-- Running version " << version << " model " << model
 			<< std::endl;
 
@@ -72,7 +76,7 @@ int main(int argc, char** argv, int seed1, int seed2, int seed3) {
             runManager->SetUserAction(new LHEPrimaryGeneratorAction(model));
         }
         else {
-            runManager->SetUserAction(new PrimaryGeneratorAction(model, signal, data));
+            runManager->SetUserAction(new PrimaryGeneratorAction(model, signal));
             runManager->Initialize();
         }
 
