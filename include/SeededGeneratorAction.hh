@@ -33,7 +33,7 @@
 
 #ifndef SeededGeneratorAction_h
 #define SeededGeneratorAction_h 1
-
+#include <iostream>
 #include "G4VUserPrimaryGeneratorAction.hh"
 #include "globals.hh"
 #include <map>
