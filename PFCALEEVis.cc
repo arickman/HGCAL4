@@ -22,7 +22,7 @@
 #include "G4UIExecutive.hh"
 #endif
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv, char** seed) {
 #ifdef G4VIS_USE
 	std::cout << " -- G4VIS_USE is set " << std::endl;
 #else
@@ -45,14 +45,20 @@ int main(int argc, char** argv) {
 
         bool signal = true;
 	std::string data = "";
+	int seed1 = seed[1];
+	int seed2 = seed[2];
+	int seed3 = seed[3];
 	if (argc > 2)
 		version = atoi(argv[2]);
 	if (argc > 3)
-		model = atoi(argv[3]);
+		//model = atoi(argv[3]);
+		model = seed1;
 	if (argc > 4)
-		signal = atoi(argv[4]);
+		//signal = atoi(argv[4]);
+		signal = seed2;
 	if (argc > 5)
-		data = argv[5];
+		//data = argv[5];
+		data = seed3;
 	std::cout << "-- Running version " << version << " model " << model
 			<< std::endl;
 

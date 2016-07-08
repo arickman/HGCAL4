@@ -111,13 +111,13 @@ inline void SeededGeneratorAction::SetGenerator(G4VPrimaryGenerator* gen) {
 inline void SeededGeneratorAction::PipeData(){
 	ofstream outputFile("temp2.rndm");
 	int seed1;
-	  cout << "Please enter a 5 digit integer seed value: ";
+	  cout << "Please enter a 5 digit integer seed value: "<< std::endl;
 	  cin >> seed1;
 	int seed2;
-	  cout << "Please enter a 5 digit integer seed value: ";
+	  cout << "Please enter a 5 digit integer seed value: "<< std::endl;
 	  cin >> seed2;
 	int seed3;
-	  cout << "Please enter a 5 digit integer seed value: ";
+	  cout << "Please enter a 5 digit integer seed value: "<< std::endl;
 	  cin >> seed3;
 	//Int_t line1 = evt_-> status().x(), line2 = evt_-> status().y(),
 			//line3 = evt_-> seeds().x(), line4 = evt_-> seeds().y();
