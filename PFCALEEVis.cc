@@ -69,7 +69,7 @@ int main(int argc, char** argv) {
 
 	// Set user action classes
        // runManager->SetUserAction(new RunAction);
-	runManager->SetUserAction(new EventAction);
+	//runManager->SetUserAction(new EventAction);
 	runManager->SetUserAction(new SteppingAction);
 
         if (signal) {
