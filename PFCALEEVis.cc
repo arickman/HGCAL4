@@ -62,6 +62,7 @@ int main(int argc, char** argv) {
 		seed3 = atoi(argv[7]);
 	std::cout << "-- Running version " << version << " model " << model
 			<< std::endl;
+
 	runManager->SetUserInitialization(
 			new DetectorConstruction(version, model, signal));
 	runManager->SetUserInitialization(new PhysicsList);
