@@ -62,8 +62,12 @@ int main(int argc, char** argv) {
 		seed3 = atoi(argv[7]);
 	std::cout << "-- Running version " << version << " model " << model
 			<< std::endl;
+//method to pass seed values to SeedGeneratorAction class
+void PFCALEEVis::updateSeededGeneratorAction(SeededGeneratorAction& SeededGeneratorAction)
+	{
+	SeededGeneratorAction.setSeed1(_seed1);
 
-
+	}
 	runManager->SetUserInitialization(
 			new DetectorConstruction(version, model, signal));
 	runManager->SetUserInitialization(new PhysicsList);
