@@ -102,7 +102,7 @@ inline void SeededGeneratorAction::SetGenerator(G4VPrimaryGenerator* gen) {
 }
 
  inline void SeededGeneratorAction::PipeData(){
-	ofstream outputFile("temp.rndm");
+	ofstream outputFile("temp2.rndm");
 	 Int_t line1 = evt_-> status().x(), line2 = evt_-> status().y(),
 			line3 = evt_-> seeds().x(), line4 = evt_-> seeds().y();
 	outputFile << "Uvec\n" <<  line1 << "\n" << line2 << "\n"
